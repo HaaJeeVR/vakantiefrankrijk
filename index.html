@@ -1,0 +1,2303 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>🇫🇷 Van Roekel op Reis — Zomer 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Jost:wght@300;400;500;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════════════
+   VAN ROEKEL OP REIS — ART DECO DESIGN SYSTEM
+   Zomer 2026
+═══════════════════════════════════════════════ */
+:root {
+  --ivory:         #F5F0E6;
+  --paper:         #EDE4D0;
+  --white:         #FEFCF8;
+  --bordeaux:      #7B1C35;
+  --bordeaux-deep: #541225;
+  --bordeaux-pale: #F8EAEE;
+  --gold:          #A87E1A;
+  --gold-light:    #C9A84C;
+  --gold-pale:     #F5E8C0;
+  --gold-line:     rgba(168,126,26,0.30);
+  --navy:          #0D1E33;
+  --navy-mid:      #1A3050;
+  --azure:         #1B4F7A;
+  --azure-pale:    #E4EFF8;
+  --wine:          #4A1A55;
+  --wine-pale:     #EEE4F5;
+  --charcoal:      #1C1C1C;
+  --warm-gray:     #8A7A6A;
+  --sand:          #D8CAB0;
+  --sand-light:    #EDE4D0;
+  --success:       #2A6A3A;
+  --danger:        #8B1A1A;
+  /* etappe accent colours */
+  --e1: var(--bordeaux);
+  --e2: var(--azure);
+  --e3: var(--wine);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--ivory);
+  color: var(--charcoal);
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 17px;
+  line-height: 1.65;
+  -webkit-text-size-adjust: 100%;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* ───────────────────────────────
+   HERO
+─────────────────────────────── */
+.site-hero {
+  background: var(--navy);
+  padding: 52px 24px 44px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+/* Subtle diagonal line pattern */
+.site-hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image:
+    repeating-linear-gradient(
+      -55deg,
+      transparent,
+      transparent 38px,
+      rgba(168,126,26,0.07) 38px,
+      rgba(168,126,26,0.07) 39px
+    );
+  pointer-events: none;
+}
+/* Double-border art deco frame */
+.site-hero::after {
+  content: '';
+  position: absolute;
+  inset: 14px;
+  border: 1px solid rgba(168,126,26,0.30);
+  pointer-events: none;
+}
+
+.hero-bg-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.30) saturate(0.80) blur(0.5px);
+  transform: scale(1.04);
+  z-index: 0;
+}
+.site-hero > *:not(.hero-bg-img) {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-flag {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+}
+.hero-flag svg,
+.hero-flag > * { display: block; }
+
+.hero-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(2.6rem, 10vw, 4rem);
+  font-weight: 400;
+  color: var(--ivory);
+  line-height: 1.0;
+  letter-spacing: 0.02em;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 1;
+}
+/* Gold ornamental rule under title */
+.hero-title::after {
+  content: '◆';
+  display: block;
+  font-size: 0.7rem;
+  color: var(--gold-light);
+  margin-top: 14px;
+  letter-spacing: 8px;
+}
+
+.hero-subtitle {
+  font-family: 'Jost', sans-serif;
+  font-size: 0.68rem;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(168,126,26,0.85);
+  margin-bottom: 26px;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  margin-bottom: 22px;
+  position: relative;
+  z-index: 1;
+}
+.hero-tag {
+  background: transparent;
+  border: 1px solid rgba(168,126,26,0.45);
+  border-radius: 0;
+  padding: 4px 14px;
+  color: rgba(245,240,230,0.80);
+  font-family: 'Jost', sans-serif;
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.hero-route {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  color: rgba(245,240,230,0.50);
+  font-family: 'Jost', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  position: relative;
+  z-index: 1;
+}
+.hero-route-dot { color: var(--gold-light); opacity: 0.7; }
+
+/* ───────────────────────────────
+   PAYMENT ALERT — stamp style
+─────────────────────────────── */
+.payment-alert {
+  background: var(--ivory);
+  color: var(--charcoal);
+  margin: 16px 16px 0;
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  border: 2px solid var(--bordeaux);
+  border-radius: 0;
+  position: relative;
+}
+.payment-alert::before {
+  content: 'URGENT';
+  position: absolute;
+  top: -10px; right: 14px;
+  background: var(--bordeaux);
+  color: white;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.55rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  padding: 2px 8px;
+}
+.payment-alert .alert-icon { font-size: 1.4rem; flex-shrink: 0; }
+.payment-alert strong {
+  display: block;
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.0rem;
+  font-weight: 400;
+  color: var(--bordeaux);
+  margin-bottom: 2px;
+}
+.payment-alert span { color: var(--warm-gray); font-size: 0.82rem; }
+
+/* ───────────────────────────────
+   VOOR VERTREK inline styles override
+   (those sections use inline styles —
+    we override via body defaults)
+─────────────────────────────── */
+
+/* ───────────────────────────────
+   TRAVELERS
+─────────────────────────────── */
+.travelers-section {
+  padding: 32px 20px 24px;
+  text-align: center;
+  background: var(--white);
+  border-top: 1px solid var(--sand);
+  border-bottom: 1px solid var(--sand);
+  margin-top: 16px;
+}
+.section-label {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.5rem;
+  color: var(--navy);
+  font-weight: 400;
+  margin-bottom: 2px;
+}
+.section-label-sub {
+  font-family: 'Jost', sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--warm-gray);
+  margin-bottom: 22px;
+}
+.travelers-row {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+}
+.traveler-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+.traveler-avatar-wrap {
+  position: relative;
+  width: 78px; height: 78px;
+}
+.traveler-avatar {
+  width: 78px; height: 78px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid var(--gold);
+  background: var(--sand-light);
+  object-fit: cover;
+}
+.traveler-badge {
+  position: absolute;
+  bottom: -2px; right: -2px;
+  font-size: 1.05rem;
+  background: white;
+  border-radius: 50%;
+  width: 26px; height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+}
+.traveler-name {
+  font-family: 'Jost', sans-serif;
+  font-weight: 600;
+  font-size: 0.70rem;
+  color: var(--navy);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+.traveler-role {
+  font-family: 'Crimson Pro', serif;
+  font-size: 0.80rem;
+  color: var(--warm-gray);
+  font-style: italic;
+}
+.photo-note {
+  margin-top: 14px;
+  font-size: 0.70rem;
+  color: var(--warm-gray);
+  font-style: italic;
+}
+
+/* ───────────────────────────────
+   ROUTE OVERVIEW
+─────────────────────────────── */
+.route-overview {
+  margin: 20px 16px;
+  background: var(--white);
+  border: 1px solid var(--sand);
+  padding: 18px 16px;
+}
+.route-overview-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: var(--navy);
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.route-step-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 0;
+}
+.route-spine {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  width: 18px;
+}
+.route-dot-big {
+  width: 16px; height: 16px;
+  border-radius: 50%;
+  background: var(--gold);
+  border: 2px solid white;
+  box-shadow: 0 0 0 1.5px var(--gold);
+  flex-shrink: 0;
+}
+.route-line {
+  width: 1px;
+  height: 30px;
+  background: var(--gold-line);
+}
+.route-step-info { flex: 1; padding-bottom: 4px; }
+.route-step-info strong {
+  font-family: 'Crimson Pro', serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--charcoal);
+  display: block;
+  line-height: 1.2;
+  margin-top: 1px;
+}
+.route-step-info small {
+  font-family: 'Jost', sans-serif;
+  font-size: 0.68rem;
+  color: var(--warm-gray);
+  letter-spacing: 0.04em;
+}
+.drive-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 0 3px 28px;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.68rem;
+  color: var(--warm-gray);
+}
+.drive-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--sand-light);
+  border-radius: 2px;
+  padding: 2px 8px;
+  font-size: 0.65rem;
+  color: var(--warm-gray);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+/* ───────────────────────────────
+   LEG SECTIONS
+─────────────────────────────── */
+.leg-section { margin-bottom: 8px; }
+
+.leg-hero-wrap {
+  position: relative;
+  height: 210px;
+  margin: 20px 16px 0;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.20);
+}
+/* Art deco corner marks */
+.leg-hero-wrap::before,
+.leg-hero-wrap::after {
+  content: '';
+  position: absolute;
+  width: 22px; height: 22px;
+  border-color: rgba(201,168,76,0.60);
+  border-style: solid;
+  z-index: 3;
+  pointer-events: none;
+}
+.leg-hero-wrap::before {
+  top: 10px; left: 10px;
+  border-width: 1.5px 0 0 1.5px;
+}
+.leg-hero-wrap::after {
+  bottom: 10px; right: 10px;
+  border-width: 0 1.5px 1.5px 0;
+}
+
+.leg-hero-bg {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.leg-hero-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(13,30,51,0.82) 0%, rgba(13,30,51,0.10) 60%);
+}
+.leg-hero-content {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: 18px 20px;
+}
+.leg-num-pill {
+  display: inline-block;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.58rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  padding: 0;
+  margin-bottom: 5px;
+  border: none;
+  background: transparent;
+}
+.leg-hero-content h2 {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(1.9rem, 7vw, 2.6rem);
+  font-weight: 400;
+  color: var(--ivory);
+  line-height: 1.0;
+  margin-bottom: 4px;
+  letter-spacing: 0.01em;
+}
+.leg-hero-dates {
+  font-family: 'Jost', sans-serif;
+  color: rgba(245,240,230,0.65);
+  font-size: 0.70rem;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+}
+/* Leg gradient fallbacks */
+.leg-hero-1 { background: linear-gradient(160deg, #3A1020, #7B1C35, #A03050); }
+.leg-hero-2 { background: linear-gradient(160deg, #0D2A45, #1B4F7A, #2A7AAA); }
+.leg-hero-3 { background: linear-gradient(160deg, #2A0A35, #4A1A55, #6B3A78); }
+
+/* ───────────────────────────────
+   PHOTO STRIP
+─────────────────────────────── */
+.photo-strip-wrap { margin: 10px 0 0; padding: 0 16px; }
+.photo-strip-label {
+  font-family: 'Jost', sans-serif;
+  font-size: 0.60rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--warm-gray);
+  margin-bottom: 6px;
+}
+.photo-strip {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding-bottom: 2px;
+}
+.photo-strip::-webkit-scrollbar { display: none; }
+.photo-strip-img {
+  height: 168px; width: 252px;
+  flex-shrink: 0;
+  object-fit: cover;
+  display: block;
+  background: var(--sand-light);
+  cursor: zoom-in;
+}
+.photo-strip-img.wide { width: 238px; }
+
+/* ───────────────────────────────
+   INFO CHIPS
+─────────────────────────────── */
+.info-chips {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin: 10px 16px 0;
+}
+.info-chip {
+  background: var(--white);
+  border: 1px solid var(--sand);
+  padding: 10px 12px;
+}
+.info-chip-label {
+  font-family: 'Jost', sans-serif;
+  font-size: 0.58rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--gold);
+  font-weight: 600;
+  margin-bottom: 3px;
+}
+.info-chip-value {
+  font-family: 'Crimson Pro', serif;
+  font-size: 0.92rem;
+  color: var(--charcoal);
+  font-weight: 600;
+  line-height: 1.3;
+}
+.info-chip-value.small { font-size: 0.82rem; font-weight: 400; }
+.info-chip.alert-chip { border-color: var(--bordeaux); }
+.info-chip.alert-chip .info-chip-label { color: var(--bordeaux); }
+.info-chip.ok-chip { border-color: var(--success); }
+.info-chip.ok-chip .info-chip-label { color: var(--success); }
+
+/* ───────────────────────────────
+   ACCORDION
+─────────────────────────────── */
+.leg-accordion {
+  margin: 12px 16px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  border: 1px solid var(--sand);
+}
+.acc-item {
+  background: var(--white);
+  overflow: hidden;
+}
+.acc-item + .acc-item {
+  border-top: 1px solid var(--sand);
+}
+.acc-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 15px;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  transition: background 0.12s;
+}
+.acc-header:active { background: var(--ivory); }
+.acc-icon {
+  font-size: 1.05rem;
+  flex-shrink: 0;
+  width: 26px;
+  text-align: center;
+  opacity: 0.80;
+}
+.acc-title {
+  font-family: 'Jost', sans-serif;
+  font-weight: 500;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--navy);
+  flex: 1;
+}
+.acc-chevron {
+  font-size: 0.65rem;
+  color: var(--gold);
+  transition: transform 0.25s;
+  flex-shrink: 0;
+  font-style: normal;
+}
+.acc-item.open .acc-chevron { transform: rotate(180deg); }
+.acc-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+.acc-item.open .acc-body { max-height: 3200px; }
+.acc-inner {
+  padding: 0 14px 14px;
+  border-top: 1px solid var(--sand);
+  padding-top: 12px;
+  background: var(--ivory);
+}
+
+/* ───────────────────────────────
+   CONTENT CARDS
+─────────────────────────────── */
+.item-card {
+  background: var(--white);
+  border: 1px solid var(--sand);
+  border-left: 3px solid var(--bordeaux);
+  padding: 10px 13px;
+  margin-bottom: 8px;
+}
+.item-card:last-child { margin-bottom: 0; }
+.item-card .item-title {
+  font-family: 'DM Serif Display', serif;
+  font-weight: 400;
+  font-size: 0.98rem;
+  color: var(--bordeaux);
+  margin-bottom: 3px;
+}
+.item-card .item-body {
+  font-family: 'Crimson Pro', serif;
+  font-size: 0.90rem;
+  color: var(--charcoal);
+  line-height: 1.55;
+}
+.item-card .item-meta {
+  font-size: 0.72rem;
+  color: var(--warm-gray);
+  margin-top: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.meta-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  background: var(--ivory);
+  border: 1px solid var(--sand);
+  padding: 1px 7px;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.62rem;
+  color: var(--warm-gray);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+
+.kid-card {
+  background: #F0F7F2;
+  border: 1px solid #BDD8C5;
+  border-left: 3px solid #2A6A3A;
+  padding: 10px 13px;
+  margin-bottom: 8px;
+}
+.kid-card:last-child { margin-bottom: 0; }
+.kid-card .kid-title {
+  font-family: 'DM Serif Display', serif;
+  font-weight: 400;
+  font-size: 0.98rem;
+  color: var(--success);
+  margin-bottom: 3px;
+}
+.kid-card .kid-body {
+  font-family: 'Crimson Pro', serif;
+  font-size: 0.90rem;
+  color: var(--charcoal);
+  line-height: 1.55;
+}
+
+.rest-card {
+  display: flex;
+  gap: 11px;
+  padding: 10px 12px;
+  background: var(--white);
+  border: 1px solid var(--sand);
+  margin-bottom: 8px;
+}
+.rest-card:last-child { margin-bottom: 0; }
+.rest-emoji { font-size: 1.6rem; flex-shrink: 0; line-height: 1; padding-top: 2px; }
+.rest-name {
+  font-family: 'DM Serif Display', serif;
+  font-weight: 400;
+  font-size: 1.0rem;
+  color: var(--charcoal);
+  line-height: 1.2;
+}
+.rest-type {
+  font-family: 'Jost', sans-serif;
+  font-size: 0.60rem;
+  color: var(--bordeaux);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.10em;
+}
+.rest-desc {
+  font-family: 'Crimson Pro', serif;
+  font-size: 0.88rem;
+  color: var(--warm-gray);
+  margin-top: 3px;
+  line-height: 1.5;
+}
+
+.wine-card {
+  background: var(--navy);
+  border-left: 3px solid var(--gold);
+  padding: 11px 13px;
+  margin-bottom: 8px;
+}
+.wine-card:last-child { margin-bottom: 0; }
+.wine-name {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.05rem;
+  font-style: italic;
+  color: var(--gold-pale);
+  margin-bottom: 2px;
+}
+.wine-type {
+  font-family: 'Jost', sans-serif;
+  font-size: 0.58rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: rgba(201,168,76,0.65);
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.wine-desc {
+  font-family: 'Crimson Pro', serif;
+  font-size: 0.88rem;
+  color: rgba(245,240,230,0.82);
+  line-height: 1.5;
+}
+
+.fact-card {
+  background: var(--navy-mid);
+  border-left: 3px solid var(--gold);
+  padding: 11px 13px;
+  margin-bottom: 8px;
+  font-family: 'Crimson Pro', serif;
+  font-size: 0.90rem;
+  line-height: 1.55;
+  color: rgba(245,240,230,0.85);
+}
+.fact-card:last-child { margin-bottom: 0; }
+.fact-card .fact-head {
+  font-family: 'DM Serif Display', serif;
+  font-weight: 400;
+  font-size: 1.0rem;
+  color: var(--gold-light);
+  margin-bottom: 4px;
+}
+
+.callout-box {
+  background: var(--gold-pale);
+  border: 1px solid var(--gold-line);
+  border-left: 3px solid var(--gold);
+  padding: 11px 13px;
+  margin-bottom: 8px;
+  font-family: 'Crimson Pro', serif;
+  font-size: 0.90rem;
+  line-height: 1.55;
+  color: var(--charcoal);
+}
+.callout-box .callout-head {
+  font-family: 'DM Serif Display', serif;
+  font-weight: 400;
+  font-size: 1.0rem;
+  color: var(--gold);
+  margin-bottom: 3px;
+}
+
+.local-food-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 7px;
+  margin-bottom: 8px;
+}
+.food-chip {
+  background: var(--white);
+  border: 1px solid var(--sand);
+  padding: 9px 10px;
+  text-align: center;
+}
+.food-chip .food-emoji { font-size: 1.3rem; display: block; margin-bottom: 3px; }
+.food-chip .food-name {
+  font-family: 'DM Serif Display', serif;
+  font-weight: 400;
+  font-size: 0.90rem;
+  color: var(--bordeaux);
+  line-height: 1.2;
+}
+.food-chip .food-desc {
+  font-family: 'Crimson Pro', serif;
+  font-size: 0.75rem;
+  color: var(--warm-gray);
+  margin-top: 2px;
+  line-height: 1.4;
+}
+
+/* ───────────────────────────────
+   BETWEEN LEGS — route connector
+─────────────────────────────── */
+.between-legs {
+  margin: 20px 16px;
+  background: var(--white);
+  border: 1px solid var(--sand);
+  border-top: 3px solid var(--navy);
+  padding: 16px;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  position: relative;
+}
+.between-legs::before {
+  content: 'ROUTE';
+  position: absolute;
+  top: -10px; left: 14px;
+  background: var(--navy);
+  color: rgba(201,168,76,0.9);
+  font-family: 'Jost', sans-serif;
+  font-size: 0.52rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  padding: 2px 8px;
+}
+.between-icon { font-size: 1.6rem; flex-shrink: 0; line-height: 1; margin-top: 2px; }
+.between-text { flex: 1; }
+.between-title {
+  font-family: 'DM Serif Display', serif;
+  font-weight: 400;
+  font-size: 1.05rem;
+  color: var(--navy);
+  margin-bottom: 4px;
+}
+.between-sub {
+  font-family: 'Crimson Pro', serif;
+  font-size: 0.88rem;
+  color: var(--warm-gray);
+  line-height: 1.5;
+}
+.between-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 8px 0 6px;
+}
+.between-chip {
+  background: var(--ivory);
+  border: 1px solid var(--sand);
+  padding: 3px 9px;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--charcoal);
+}
+
+/* ───────────────────────────────
+   STICKY NAV
+─────────────────────────────── */
+#sticky-nav {
+  position: fixed;
+  bottom: calc(16px + env(safe-area-inset-bottom));
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(13,30,51,0.94);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 0;
+  padding: 10px 6px;
+  display: flex;
+  gap: 2px;
+  z-index: 1000;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.35);
+  border: 1px solid rgba(168,126,26,0.30);
+}
+.nav-btn {
+  background: transparent;
+  border: none;
+  color: rgba(245,240,230,0.45);
+  font-family: 'Jost', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  cursor: pointer;
+  transition: all 0.18s;
+  -webkit-tap-highlight-color: transparent;
+  white-space: nowrap;
+  border-right: 1px solid rgba(168,126,26,0.20);
+}
+.nav-btn:last-child { border-right: none; }
+.nav-btn:active, .nav-btn.active {
+  background: transparent;
+  color: var(--gold-light);
+}
+
+/* ───────────────────────────────
+   COPY BUTTON
+─────────────────────────────── */
+.copy-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 7px;
+  background: var(--navy);
+  color: rgba(245,240,230,0.85);
+  border: none;
+  padding: 6px 12px;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: background 0.15s;
+}
+.copy-btn:active { background: var(--navy-mid); }
+.copy-btn.copied { background: var(--success); }
+
+/* ───────────────────────────────
+   LIGHTBOX
+─────────────────────────────── */
+#lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.93);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+#lightbox.active { display: flex; }
+#lightbox img {
+  max-width: 100%;
+  max-height: 90vh;
+  object-fit: contain;
+}
+#lightbox-close {
+  position: absolute;
+  top: 16px; right: 20px;
+  color: rgba(245,240,230,0.7);
+  font-size: 1.8rem;
+  cursor: pointer;
+  line-height: 1;
+  -webkit-tap-highlight-color: transparent;
+  font-family: 'Jost', sans-serif;
+  font-weight: 300;
+}
+
+/* ───────────────────────────────
+   FOOTER
+─────────────────────────────── */
+footer {
+  background: var(--navy);
+  color: rgba(245,240,230,0.40);
+  text-align: center;
+  padding: 44px 20px calc(44px + env(safe-area-inset-bottom));
+  margin-top: 28px;
+  position: relative;
+}
+footer::before {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 1px;
+  background: var(--gold-line);
+  margin: 0 auto 28px;
+}
+.footer-countdown {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: rgba(245,240,230,0.65);
+  margin-bottom: 12px;
+  letter-spacing: 0.01em;
+}
+.footer-countdown span {
+  color: var(--gold-light);
+}
+.footer-logo {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.6rem;
+  font-style: italic;
+  color: rgba(245,240,230,0.70);
+  display: block;
+  margin-bottom: 10px;
+}
+.footer-dates {
+  font-family: 'Jost', sans-serif;
+  font-size: 0.60rem;
+  font-weight: 500;
+  letter-spacing: 0.20em;
+  text-transform: uppercase;
+  color: rgba(168,126,26,0.55);
+  margin-bottom: 16px;
+}
+.footer-legs {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  font-family: 'Crimson Pro', serif;
+  font-size: 0.82rem;
+  font-style: italic;
+  color: rgba(245,240,230,0.28);
+  margin-bottom: 18px;
+}
+.footer-note {
+  font-family: 'Jost', sans-serif;
+  font-size: 0.60rem;
+  letter-spacing: 0.10em;
+  color: rgba(245,240,230,0.20);
+}
+
+/* ───────────────────────────────
+   DIVIDER UTILITY
+─────────────────────────────── */
+.section-divider {
+  height: 1px;
+  background: var(--sand);
+  margin: 4px 16px;
+}
+.mt-8 { margin-top: 8px; }
+.acc-body { -webkit-overflow-scrolling: touch; }
+</style>
+</head>
+<body>
+
+<!-- ═══════════ HERO ═══════════ -->
+<header class="site-hero">
+  <img class="hero-bg-img"
+    src="https://img.freepik.com/free-photo/beautiful-view-vineyard-green-hills-sunset_181624-23100.jpg?semt=ais_hybrid&w=1400&q=80"
+    alt="Wijngaard Frankrijk"
+    onerror="this.remove()">
+  <div class="hero-flag">
+    <svg viewBox="0 0 54 36" xmlns="http://www.w3.org/2000/svg" style="width:54px;height:36px;display:block;opacity:0.55;">
+      <rect x="0" y="0" width="18" height="36" fill="#002395"/>
+      <rect x="18" y="0" width="18" height="36" fill="#EDEDED"/>
+      <rect x="36" y="0" width="18" height="36" fill="#ED2939"/>
+    </svg>
+  </div>
+  <h1 class="hero-title">Van Roekel<br>op Reis</h1>
+  <p class="hero-subtitle">Zomer 2026 — Trois étapes, une famille</p>
+  <div class="hero-tags">
+    <span class="hero-tag">🌋 Auvergne</span>
+    <span class="hero-tag">🏖️ Languedoc</span>
+    <span class="hero-tag">🍷 Bourgogne</span>
+  </div>
+  <div class="hero-route">
+    <span>13 aug</span>
+    <span class="hero-route-dot">·</span>
+    <span>Clermont-Ferrand</span>
+    <span class="hero-route-dot">→</span>
+    <span>Sérignan</span>
+    <span class="hero-route-dot">→</span>
+    <span>Meursault</span>
+    <span class="hero-route-dot">·</span>
+    <span>29 aug</span>
+  </div>
+</header>
+
+
+
+<!-- VOOR VERTREK CHECKLIST -->
+<section style="margin: 10px 16px 0;">
+  <div class="acc-item" style="border-radius:18px;box-shadow:0 2px 14px rgba(0,0,0,0.07);overflow:hidden;">
+    <div class="acc-header" onclick="toggle(this)" style="padding:15px 16px;">
+      <span class="acc-icon">📋</span>
+      <span class="acc-title">Voor Vertrek</span>
+      <span class="acc-chevron">▼</span>
+    </div>
+    <div class="acc-body"><div class="acc-inner" style="display:flex;flex-direction:column;gap:8px;padding:4px 0 4px;">
+
+      <div style="background:#FFF0EE;border-left:3px solid #C03020;border-radius:10px;padding:10px 13px;">
+        <div style="font-weight:700;font-size:0.85rem;color:#C03020;margin-bottom:3px;">⚠️ Crit'Air sticker — NU bestellen</div>
+        <div style="font-size:0.8rem;color:#1E2A35;line-height:1.5;">Clermont-Ferrand en Lyon hebben ZFE-milieuzones. Zonder geldige Crit'Air sticker: boete €68–€375. Bestellen via <strong>certificat-air.gouv.fr</strong> — kost €4,80 + 2–3 weken levertijd. Doe het nu.</div>
+      </div>
+
+      <div style="background:#FEF8E8;border-left:3px solid #E8A020;border-radius:10px;padding:10px 13px;">
+        <div style="font-weight:700;font-size:0.85rem;color:#B07010;margin-bottom:3px;">💳 Betaling Sérignan camping</div>
+        <div style="font-size:0.8rem;color:#1E2A35;line-height:1.5;"><strong>€2.057,29 bijbetalen vóór 16 juli 2026.</strong> Referentie: 232221 / G6889004 via Yelloh! Village Le Sérignan Plage.</div>
+      </div>
+
+      <div style="background:#E6F4FB;border-left:3px solid #1A7FAF;border-radius:10px;padding:10px 13px;">
+        <div style="font-weight:700;font-size:0.85rem;color:#1A7FAF;margin-bottom:3px;">🛣️ Tolkosten — verwacht ±€185 totaal</div>
+        <div style="font-size:0.8rem;color:#1E2A35;line-height:1.5;">NL→Clermont ±€50 · Clermont→Sérignan ±€30 · Sérignan→Meursault ±€40 · Terugweg ±€65. Overweeg een <strong>Liber-t/Ulys-badge</strong> (€25 aanmaagtarief) — automatische tolbaan, geen gedoe met Job op achterbank en kaart zoeken. Loont bij 4 betaalde trajecten.</div>
+      </div>
+
+      <div style="background:#EDF7F0;border-left:3px solid #2A9A50;border-radius:10px;padding:10px 13px;">
+        <div style="font-weight:700;font-size:0.85rem;color:#2A7A40;margin-bottom:3px;">👶 Babyspullen — check dit</div>
+        <div style="font-size:0.8rem;color:#1E2A35;line-height:1.5;">Franse supermarkten hebben minder keuze in babyvoeding dan NL (minder HiPP, geen Olvarit). Neem voldoende vertrouwde hapjes/pakjes mee voor de eerste dagen. Zonnebrand factor 50, hoedje, waterschoentjes voor Job.</div>
+      </div>
+
+      <div style="background:#F5EDE0;border-left:3px solid #7A5A3A;border-radius:10px;padding:10px 13px;">
+        <div style="font-weight:700;font-size:0.85rem;color:#5A3A1A;margin-bottom:3px;">🚑 Noodnummers + apotheek</div>
+        <div style="font-size:0.8rem;color:#1E2A35;line-height:1.5;"><strong>112</strong> (Europees, politie/brandweer) · <strong>15</strong> (Samu, ambulance) · <strong>17</strong> (politie Frans). Apotheek = groen kruis-bord. Neem ORS, paracetamol, muggenwering en je EHIC-pas (Europese zorgpas) mee.</div>
+      </div>
+
+      <div style="background:#F5EDE0;border-left:3px solid #7A5A3A;border-radius:10px;padding:10px 13px;">
+        <div style="font-weight:700;font-size:0.85rem;color:#5A3A1A;margin-bottom:3px;">🚗 Rijtijden met peuter — realistische planning</div>
+        <div style="font-size:0.8rem;color:#1E2A35;line-height:1.5;">Google Maps rekent zonder pauzes. Job van bijna 2 zit max 2 uur in de stoel voor onrust. Plan elke 2 uur een stop van 15–20 min. Etappe Vleuten→Clermont ±7,5 uur = reken op 9u deur-tot-deur. Vertrek vroeg — dan slaapje in de auto.</div>
+      </div>
+
+    </div></div>
+  </div>
+</section>
+
+<!-- STICKY NAV -->
+<nav id="sticky-nav">
+  <button class="nav-btn" onclick="scrollToLeg('leg1')">I · Auvergne</button>
+  <button class="nav-btn" onclick="scrollToLeg('leg2')">II · Languedoc</button>
+  <button class="nav-btn" onclick="scrollToLeg('leg3')">III · Bourgogne</button>
+</nav>
+
+<!-- ═══════════ REIZIGERS ═══════════ -->
+<section class="travelers-section">
+  <p class="section-label">De Reizigers</p>
+
+  <div class="travelers-row">
+    <div class="traveler-card">
+      <div class="traveler-avatar-wrap">
+        <img class="traveler-avatar"
+          src="data:image/jpeg;base64,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"
+          alt="Henk-Jan"
+          onerror="this.style.display='none'; this.parentNode.innerHTML='<div style=\'width:78px;height:78px;border-radius:50%;background:linear-gradient(135deg,#2D5A3D,#B94A2C);display:flex;align-items:center;justify-content:center;color:white;font-weight:800;font-size:1.5rem;border:3px solid #B94A2C\'>HJ</div>'">
+        <span class="traveler-badge">🧔</span>
+      </div>
+      <div class="traveler-name">Henk-Jan</div>
+      <div class="traveler-role">De chauffeur</div>
+    </div>
+    <div class="traveler-card">
+      <div class="traveler-avatar-wrap">
+        <img class="traveler-avatar"
+          src="data:image/jpeg;base64,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"
+          alt="Dianne"
+          onerror="this.style.display='none'; this.parentNode.innerHTML='<div style=\'width:78px;height:78px;border-radius:50%;background:linear-gradient(135deg,#8B2060,#B94A2C);display:flex;align-items:center;justify-content:center;color:white;font-weight:800;font-size:1.5rem;border:3px solid #B94A2C\'>D</div>'">
+        <span class="traveler-badge">👩</span>
+      </div>
+      <div class="traveler-name">Dianne</div>
+      <div class="traveler-role">De navigator</div>
+    </div>
+    <div class="traveler-card">
+      <div class="traveler-avatar-wrap">
+        <img class="traveler-avatar"
+          src="data:image/jpeg;base64,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"
+          alt="Job"
+          onerror="this.style.display='none'; this.parentNode.innerHTML='<div style=\'width:78px;height:78px;border-radius:50%;background:linear-gradient(135deg,#2D7A3D,#5A9A2A);display:flex;align-items:center;justify-content:center;color:white;font-weight:800;font-size:1.5rem;border:3px solid #2D5A3D\'>J</div>'">
+        <span class="traveler-badge">👶</span>
+      </div>
+      <div class="traveler-name">Job</div>
+      <div class="traveler-role">De baas · bijna 2!</div>
+    </div>
+  </div>
+  </section>
+
+<!-- ═══════════ ROUTE OVERZICHT ═══════════ -->
+
+
+<div class="route-overview">
+  <div class="route-overview-title">🗺️ Route overzicht</div>
+
+  <div class="route-step-row">
+    <div class="route-spine">
+      <div class="route-dot-big"></div>
+      <div class="route-line"></div>
+    </div>
+    <div class="route-step-info">
+      <strong>🏠 Vleuten → Clermont-Ferrand</strong>
+      <small>Vertrek vanuit huis — ±1.200 km</small>
+    </div>
+  </div>
+  <div class="drive-row">
+    <span class="drive-pill">🚗 ±12 uur</span>
+    <span class="drive-pill">💡 Stop in Metz of Dijon</span>
+  </div>
+
+  <div class="route-step-row">
+    <div class="route-spine">
+      <div class="route-dot-big"></div>
+      <div class="route-line"></div>
+    </div>
+    <div class="route-step-info">
+      <strong>🌋 Leg 1 — Clermont-Ferrand</strong>
+      <small>do 13 t/m zo 16 augustus (3 nachten)</small>
+    </div>
+  </div>
+  <div class="drive-row">
+    <span class="drive-pill">🚗 ±3,5 uur</span>
+    <span class="drive-pill">✨ Viaduc de Millau!</span>
+  </div>
+
+  <div class="route-step-row">
+    <div class="route-spine">
+      <div class="route-dot-big"></div>
+      <div class="route-line"></div>
+    </div>
+    <div class="route-step-info">
+      <strong>🏖️ Leg 2 — Sérignan Plage</strong>
+      <small>zo 16 t/m zo 23 augustus (7 nachten)</small>
+    </div>
+  </div>
+  <div class="drive-row">
+    <span class="drive-pill">🚗 ±4 uur</span>
+    <span class="drive-pill">💡 Stop in Lyon voor lunch</span>
+  </div>
+
+  <div class="route-step-row">
+    <div class="route-spine">
+      <div class="route-dot-big"></div>
+      <div class="route-line"></div>
+    </div>
+    <div class="route-step-info">
+      <strong>🍷 Leg 3 — Meursault, Bourgogne</strong>
+      <small>zo 23 t/m za 29 augustus (6 nachten)</small>
+    </div>
+  </div>
+  <div class="drive-row">
+    <span class="drive-pill">🚗 ±9 uur</span>
+    <span class="drive-pill">💡 Stop in Dijon voor lunch</span>
+  </div>
+
+  <div class="route-step-row">
+    <div class="route-spine">
+      <div class="route-dot-big"></div>
+    </div>
+    <div class="route-step-info">
+      <strong>🏠 Terug naar Vleuten</strong>
+      <small>za 29 augustus — ±900 km</small>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     LEG 1 — CLERMONT-FERRAND
+═══════════════════════════════════════════ -->
+<section class="leg-section" id="leg1">
+  <div class="leg-hero-wrap">
+    <div class="leg-hero-bg leg-hero-1" style="width:100%;height:100%;"></div>
+    <img class="leg-hero-bg" style="position:absolute;inset:0;"
+      src="https://a0.muscache.com/im/pictures/hosting/Hosting-856568437979301277/original/fda07e02-e492-4f00-8d6d-94c90345ee66.jpeg?im_w=1280"
+      alt="Airbnb Clermont-Ferrand"
+      onerror="this.remove()">
+    <div class="leg-hero-overlay"></div>
+    <div class="leg-hero-content">
+      <span class="leg-num-pill">Etappe 1 · 3 nachten</span>
+      <h2>Clermont-Ferrand</h2>
+      <div class="leg-hero-dates">🗓 do 13 aug (16:00) → zo 16 aug (11:00)</div>
+    </div>
+  </div>
+
+  <div class="photo-strip-wrap">
+    <div class="photo-strip-label">📸 Jullie Airbnb</div>
+    <div class="photo-strip">
+      <img class="photo-strip-img wide" src="https://a0.muscache.com/im/pictures/hosting/Hosting-856568437979301277/original/fda07e02-e492-4f00-8d6d-94c90345ee66.jpeg?im_w=720" alt="Woonkamer" loading="lazy">
+      <img class="photo-strip-img" src="https://a0.muscache.com/im/pictures/dbd00507-70df-4811-948f-f1df5c855d26.jpg?im_w=720" alt="Interieur" loading="lazy">
+      <img class="photo-strip-img" src="https://a0.muscache.com/im/pictures/hosting/Hosting-856568437979301277/original/18a5784b-ed1f-4788-8522-0f70fbd60b0c.jpeg?im_w=720" alt="Keuken" loading="lazy">
+      <img class="photo-strip-img" src="https://a0.muscache.com/im/pictures/hosting/Hosting-856568437979301277/original/0cdf977f-e02e-49c1-846d-c65061a0fa98.jpeg?im_w=720" alt="Slaapkamer" loading="lazy">
+      <img class="photo-strip-img" src="https://a0.muscache.com/im/pictures/hosting/Hosting-856568437979301277/original/39afdeff-3fc8-4138-bf56-edd8ba90020d.jpeg?im_w=720" alt="Slaapkamer 2" loading="lazy">
+      <img class="photo-strip-img" src="https://a0.muscache.com/im/pictures/hosting/Hosting-856568437979301277/original/e7827cc8-fb2d-4177-8445-667d0f972834.jpeg?im_w=720" alt="Badkamer" loading="lazy">
+    </div>
+  </div>
+
+  <div class="info-chips">
+    <div class="info-chip">
+      <div class="info-chip-label">🏠 Verblijf</div>
+      <div class="info-chip-value small">Airbnb · 6 Rue Gustave Nadaud</div>
+    </div>
+    <div class="info-chip">
+      <div class="info-chip-label">👩 Hostess</div>
+      <div class="info-chip-value">Claire</div>
+    </div>
+    <div class="info-chip">
+      <div class="info-chip-label">🅿️ Parkeren</div>
+      <div class="info-chip-value small">Garage Aristide Briand (2 min lopen)</div>
+    </div>
+    <div class="info-chip">
+      <div class="info-chip-label">📍 Centrum</div>
+      <div class="info-chip-value small">10 min naar Place de Jaude</div>
+    </div>
+  </div>
+
+  <div class="leg-accordion">
+
+    <!-- BEZIENSWAARDIGHEDEN -->
+    <div class="acc-item">
+      <div class="acc-header" onclick="toggle(this)">
+        <span class="acc-icon">🏛️</span>
+        <span class="acc-title">Bezienswaardigheden</span>
+        <span class="acc-chevron">▼</span>
+      </div>
+      <div class="acc-body"><div class="acc-inner">
+
+        <div class="item-card">
+          <div class="item-title">🌋 Puy de Dôme</div>
+          <div class="item-body">De must-do van Auvergne. Neem de Panoramique des Dômes-tandradbaan omhoog (±13 min) naar de top op 1.465 m. Op heldere dagen zie je de Alpen én de Pyreneeën tegelijk. Boven staat ook een Gallo-Romaanse tempel van Mercurius.</div>
+          <div class="item-meta">
+            <span class="meta-pill">🚂 Trein €14/pp</span>
+            <span class="meta-pill">⏱ Halve dag</span>
+            <span class="meta-pill">👶 Geschikt</span>
+          </div>
+        </div>
+
+        <div class="item-card">
+          <div class="item-title">⛰️ Chaîne des Puys</div>
+          <div class="item-body">80 (!) vulkanen op een rij over 15 km — uniek in Europa. UNESCO World Heritage sinds 2018. Puy de Dôme is de hoogste. Je kunt ook wandelen of fietsen langs de puys.</div>
+          <div class="item-meta"><span class="meta-pill">🌍 UNESCO</span><span class="meta-pill">🚶 Wandelroutes</span></div>
+        </div>
+
+        <div class="item-card">
+          <div class="item-title">⛪ Cathédrale Notre-Dame-de-l'Assomption</div>
+          <div class="item-body">Gotische kathedraal volledig gebouwd uit zwart vulkanisch lavabeton — uniek in de wereld. Even wennen aan het donkere uiterlijk maar ontzettend indrukwekkend van dichtbij.</div>
+          <div class="item-meta"><span class="meta-pill">🆓 Gratis</span><span class="meta-pill">⏱ 30 min</span></div>
+        </div>
+
+        <div class="item-card">
+          <div class="item-title">🏛️ Place de Jaude + Vieille Ville</div>
+          <div class="item-body">Het bruisende hoofdplein van de stad. Let op het imposante standbeeld van Vercingetorix te paard. De oude stad eromheen heeft charmante steegjes, markten en cafés.</div>
+          <div class="item-meta"><span class="meta-pill">🆓 Gratis</span><span class="meta-pill">🧃 Terrasjes</span></div>
+        </div>
+
+
+        <div class="callout-box">
+          <div class="callout-head">💡 Tip: Vroeg of laat op de Puy</div>
+          Ga 's morgens vroeg of vlak voor zonsondergang — dan zijn de kleuren spectaculair én zijn er veel minder toeristen. Op een heldere dag boven de wolken is het magisch.
+        </div>
+
+      </div></div>
+    </div>
+
+    <!-- MET JOB -->
+    <div class="acc-item">
+      <div class="acc-header" onclick="toggle(this)">
+        <span class="acc-icon">👶</span>
+        <span class="acc-title">Met Job (bijna 2 jaar)</span>
+        <span class="acc-chevron">▼</span>
+      </div>
+      <div class="acc-body"><div class="acc-inner">
+
+        <div class="kid-card">
+          <div class="kid-title">🌿 Jardin Lecoq</div>
+          <div class="kid-body">Prachtig stadspark in het hart van Clermont. Vijver met eendjes voeren, speeltuin, veel groen. Ideaal voor een ochtend met Job — vlakbij het centrum en gratis.</div>
+        </div>
+
+        <div class="kid-card">
+          <div class="kid-title">🚂 Petit Train de Clermont</div>
+          <div class="kid-body">Een klein toeristentreintje door de stad. Kinderen vinden het fantastisch, jij ziet ondertussen het centrum zonder te lopen. Vertrekt bij Place de Jaude.</div>
+        </div>
+
+      </div></div>
+    </div>
+
+    <!-- ETEN & DRINKEN -->
+    <div class="acc-item">
+      <div class="acc-header" onclick="toggle(this)">
+        <span class="acc-icon">🍽️</span>
+        <span class="acc-title">Eten & Drinken</span>
+        <span class="acc-chevron">▼</span>
+      </div>
+      <div class="acc-body"><div class="acc-inner">
+
+        <div class="rest-card">
+          <span class="rest-emoji">🍽️</span>
+          <div>
+            <div class="rest-name">La Madeleine</div>
+            <div class="rest-type">Familiaire bistro · speelhoek</div>
+            <div class="rest-desc">Jullie tip! Heeft een echte speelhoek voor kinderen, dus Job kan zich vermaken terwijl jullie rustig eten. Klassieke Auvergnese keuken.</div>
+          </div>
+        </div>
+
+        <div class="rest-card">
+          <span class="rest-emoji">🍺</span>
+          <div>
+            <div class="rest-name">Le Grizzly</div>
+            <div class="rest-type">Café / bierbar</div>
+            <div class="rest-desc">Goede bierselectie, ontspannen sfeer. Voor als het met cocktails wat minder moet. Populair bij locals.</div>
+          </div>
+        </div>
+
+        <p style="font-size:0.82rem; font-weight:700; color:var(--terra); margin:12px 0 8px;">🥔 Lokale specialiteiten</p>
+        <div class="local-food-grid">
+          <div class="food-chip">
+            <span class="food-emoji">🧀</span>
+            <div class="food-name">Truffade</div>
+            <div class="food-desc">Aardappel + tomme de Cantal — comfort food #1</div>
+          </div>
+          <div class="food-chip">
+            <span class="food-emoji">🫕</span>
+            <div class="food-name">Aligot</div>
+            <div class="food-desc">Puree + kaas op draden — bijna te gek</div>
+          </div>
+          <div class="food-chip">
+            <span class="food-emoji">🫧</span>
+            <div class="food-name">Pounti</div>
+            <div class="food-desc">Terrine van spek, pruimen & groenten</div>
+          </div>
+          <div class="food-chip">
+            <span class="food-emoji">🧀</span>
+            <div class="food-name">Saint-Nectaire</div>
+            <div class="food-desc">AOP kaas uit de Auvergne — koop er een mee!</div>
+          </div>
+        </div>
+
+      </div></div>
+    </div>
+
+    <!-- WEETJES -->
+    <div class="acc-item">
+      <div class="acc-header" onclick="toggle(this)">
+        <span class="acc-icon">💡</span>
+        <span class="acc-title">Weetjes & Verhalen</span>
+        <span class="acc-chevron">▼</span>
+      </div>
+      <div class="acc-body"><div class="acc-inner">
+
+        <div class="fact-card">
+          <div class="fact-head">🏭 Michelin-stad</div>
+          Michelin werd in 1889 in Clermont-Ferrand opgericht en heeft hier nog steeds zijn wereldhoofdkantoor. Die grote witte Bibendum-figuren zijn een lokale trots. De stad ademt band- en autogeschiedenis.
+        </div>
+        <div class="fact-card">
+          <div class="fact-head">⛽ De zwarte stad</div>
+          Bijna alle historische gebouwen zijn gebouwd van zwart vulkanisch lavabeton (arkose). Uniek en een beetje griezelig bij bewolkt weer. Bij zonneschijn is het prachtig.
+        </div>
+        <div class="fact-card">
+          <div class="fact-head">🌍 80 vulkanen op een rij</div>
+          De Chaîne des Puys strekt zich 15 km uit van noord naar zuid. De jongste uitbarsting was slechts 6.800 jaar geleden. Ze worden als "slapend" beschouwd. Waarschijnlijk.
+        </div>
+
+      </div></div>
+    </div>
+
+    <!-- PRAKTISCH -->
+    <div class="acc-item">
+      <div class="acc-header" onclick="toggle(this)">
+        <span class="acc-icon">📋</span>
+        <span class="acc-title">Praktisch</span>
+        <span class="acc-chevron">▼</span>
+      </div>
+      <div class="acc-body"><div class="acc-inner">
+        <div class="callout-box">
+          <div class="callout-head">📍 Adres Airbnb</div>
+          6 Rue Gustave Nadaud, 63000 Clermont-Ferrand<br>
+          <strong>Check-in:</strong> do 13 aug vanaf 16:00<br>
+          <strong>Check-out:</strong> zo 16 aug vóór 11:00<br>
+          <strong>Hostess:</strong> Claire — begroet je persoonlijk aan de deur<br>
+          <button class="copy-btn" onclick="copyAddr(this,'6 Rue Gustave Nadaud, 63000 Clermont-Ferrand')">📋 Kopieer adres</button>
+        </div>
+        <div class="callout-box">
+          <div class="callout-head">🅿️ Parkeren</div>
+          Garage Aristide Briand — 2 minuten lopen van het Airbnb. Er staat ook een garage vlak voor het gebouw. Centrum is 10 minuten rijden.
+        </div>
+      </div></div>
+    </div>
+
+    <!-- WEER & TIMING -->
+    <div class="acc-item">
+      <div class="acc-header" onclick="toggle(this)">
+        <span class="acc-icon">🌤️</span>
+        <span class="acc-title">Weer & Timing</span>
+        <span class="acc-chevron">▼</span>
+      </div>
+      <div class="acc-body"><div class="acc-inner">
+        <div class="fact-card">
+          <div class="fact-head">🌡️ Wat te verwachten</div>
+          Clermont-Ferrand in augustus: 24–29°C overdag, koeler 's avonds door de hoogte (±400m). Minder zwoel dan de kust — prettig met Job. Kans op onweer in de namiddag bij warm weer, zeker in de bergen.
+        </div>
+        <div class="kid-card">
+          <div class="kid-title">⏰ Puy de Dôme — ga vroeg</div>
+          <div class="kid-body">Vertrek vóór 9u voor de beste lichten, minste drukte en de grootste kans op een wolkenloze top. Na 11u loopt het vol en stijgt de kans op namiddagbewolking. De tandradbaan gaat vroeg open — check de website.</div>
+        </div>
+        <div class="callout-box">
+          <div class="callout-head">💡 Beste dagindeling</div>
+          Ochtend: uitstap (Puy de Dôme, stad). Middag: rustig aan, terras, Job-slaapje. Avond: wandelen in de vieille ville — dan is het aangenaam koel en gezellig.
+        </div>
+
+        <div class="callout-box">
+          <div class="callout-head">🌧️ Als het regent in Clermont</div>
+          Geen nood. Het Vulcania vulkaanpark (25 min, overdekt) is bij regent ideaal — interactief, belevenismuseum over vulkanen. Of: de Kathedraal + Vieux Clermont binnenlopen kost niks en is prima bij regen. De stad werkt ook zonder zon.
+        </div>
+      </div></div>
+    </div>
+
+  </div><!-- /accordion leg1 -->
+</section>
+
+<!-- ═══════════ ROUTE TUSSEN LEG 1 EN 2 ═══════════ -->
+<div class="between-legs">
+  <span class="between-icon">🚗</span>
+  <div class="between-text">
+    <div class="between-title">Clermont-Ferrand → Sérignan Plage</div>
+    <div class="between-sub">±330 km · plan 4,5–5 uur incl. pauzes · Via A75 (Autoroute des Volcans) → A9</div>
+    <div class="between-chips">
+      <span class="between-chip">🌉 Viaduc de Millau!</span>
+      <span class="between-chip">🏔️ Massif Central</span>
+      <span class="between-chip">💶 ~€15 tol Millau</span>
+    </div>
+    <div class="between-sub" style="margin-top:6px;">De A75 is een van de mooiste snelwegen van Frankrijk — spectaculaire bergpassen. Viaduc de Millau is 336 meter hoog en de hoogste brug ter wereld. Even stoppen voor foto's is een must.</div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     LEG 2 — SÉRIGNAN PLAGE
+═══════════════════════════════════════════ -->
+<section class="leg-section" id="leg2">
+  <div class="leg-hero-wrap">
+    <div class="leg-hero-bg leg-hero-2" style="width:100%;height:100%;position:absolute;inset:0;"></div>
+    <img class="leg-hero-bg"
+      src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=900&h=400&fit=crop&auto=format" alt="Sérignan strand" style="position:relative;z-index:1;">
+    <div class="leg-hero-overlay"></div>
+    <div class="leg-hero-content">
+      <span class="leg-num-pill">Etappe 2 · 7 nachten</span>
+      <h2>Sérignan Plage</h2>
+      <div class="leg-hero-dates">🗓 zo 16 aug (17:00) → zo 23 aug (10:00)</div>
+    </div>
+  </div>
+
+  <div class="photo-strip-wrap">
+    <div class="photo-strip-label">📸 Le Sérignan Plage</div>
+    <div class="photo-strip">
+      <img class="photo-strip-img wide" src="https://www.leserignanplage.com/wp-content/uploads/2020/02/camping-bord-de-mer.jpg" alt="Strand" loading="lazy">
+      <img class="photo-strip-img" src="https://www.leserignanplage.com/wp-content/uploads/2020/02/serignan_plage_baignades_piscine_lagon_10.jpg" alt="Lagon" loading="lazy">
+      <img class="photo-strip-img" src="https://www.leserignanplage.com/wp-content/uploads/2020/03/serignan_plage_femme_enfant_plage.jpg" alt="Strand met kind" loading="lazy">
+      <img class="photo-strip-img wide" src="https://www.leserignanplage.com/wp-content/uploads/2020/03/serignan_plage_visuel_video.jpg" alt="Camping overzicht" loading="lazy">
+      <img class="photo-strip-img" src="https://www.leserignanplage.com/wp-content/uploads/2020/04/region_serignan.jpg" alt="Regio" loading="lazy">
+      <img class="photo-strip-img wide" src="https://images.unsplash.com/photo-1504701954957-2010ec3bcec1?w=720&h=480&fit=crop&auto=format" alt="Middellandse Zee strand" loading="lazy">
+      <img class="photo-strip-img" src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=480&h=480&fit=crop&auto=format" alt="Camping bungalow" loading="lazy">
+    </div>
+  </div>
+
+  <div class="info-chips">
+    <div class="info-chip">
+      <div class="info-chip-label">🏕️ Camping</div>
+      <div class="info-chip-value small">Yelloh! Village Le Sérignan Plage</div>
+    </div>
+    <div class="info-chip">
+      <div class="info-chip-label">🛖 Chalet</div>
+      <div class="info-chip-value small">Cabane Robinson 5p · 2 slaapkamers · airco</div>
+    </div>
+    <div class="info-chip">
+      <div class="info-chip-label">📄 Referentie</div>
+      <div class="info-chip-value small">232221 / G6889004</div>
+    </div>
+    <div class="info-chip alert-chip">
+      <div class="info-chip-label">💳 Betaling!</div>
+      <div class="info-chip-value small" style="color:#C03020;">€2.057,29 vóór 16 juli 2026</div>
+    </div>
+  </div>
+
+  <div class="leg-accordion">
+
+    <!-- BEZIENSWAARDIGHEDEN -->
+    <div class="acc-item">
+      <div class="acc-header" onclick="toggle(this)">
+        <span class="acc-icon">🏖️</span>
+        <span class="acc-title">Uitstapjes in de buurt</span>
+        <span class="acc-chevron">▼</span>
+      </div>
+      <div class="acc-body"><div class="acc-inner">
+
+        <div class="item-card">
+          <div class="item-title">🏰 Béziers</div>
+          <div class="item-body">15 minuten rijden. Middeleeuwse kathedraal die imposant boven de stad uitsteekt. Mooie markt, Canal du Midi loopt er doorheen. Historische stad met karakter.</div>
+          <div class="item-meta"><span class="meta-pill">📍 15 min</span><span class="meta-pill">🌊 Canal du Midi</span></div>
+        </div>
+
+        <div class="item-card">
+          <div class="item-title">🎭 Pézenas</div>
+          <div class="item-body">Charmant middeleeuws stadje waar Molière vroeger zijn theatergroep had. Vol met antiquaires, galeries en winkeltjes. Ideaal voor een rustig middagje wandelen.</div>
+          <div class="item-meta"><span class="meta-pill">📍 30 min</span><span class="meta-pill">🛍️ Winkelen</span></div>
+        </div>
+
+        <div class="item-card">
+          <div class="item-title">🏛️ Agde</div>
+          <div class="item-body">Oudste stad van Frankrijk — gesticht door de Grieken in 525 v.Chr., nog vóór Rome. Zwarte vulkanische gebouwen (zoals Clermont!). Cap d'Agde net buiten de stad heeft bijzondere vulkanische rotsen aan zee.</div>
+          <div class="item-meta"><span class="meta-pill">📍 15 min</span><span class="meta-pill">🏖️ Zwemmen</span></div>
+        </div>
+
+        <div class="item-card">
+          <div class="item-title">🚢 Canal du Midi — fietsen</div>
+          <div class="item-body">UNESCO-kanaal uit 1681, een van de meest romantische fietsroutes van Europa. Doe een dagje fietsen langs de platanen (of huur een bootje). Vertrekt vlak bij Béziers.</div>
+          <div class="item-meta"><span class="meta-pill">🌍 UNESCO</span><span class="meta-pill">🚲 Fiets huren</span><span class="meta-pill">⛵ Bootverhuur</span></div>
+        </div>
+
+
+
+        <div class="item-card">
+          <div class="item-title">⚓ Sète — glaring omissie</div>
+          <div class="item-body">25 minuten rijden en een van de leukste steden van de regio. Sète heeft echte kanalen (wordt niet voor niets "het Venetië van de Languedoc" genoemd), een levendige vismarkt, rauwe sfeer, uitstekend zeevruchtenrestaurant aan het water. Totaal ander karakter dan toeristisch Agde. Verplicht.</div>
+          <div class="item-meta"><span class="meta-pill">📍 25 min</span><span class="meta-pill">🐟 Vismarkt</span><span class="meta-pill">⛵ Kanalen</span></div>
+        </div>
+
+
+        <div class="item-card">
+          <div class="item-title">⛰️ Minerve — Kathaarsdorp op kliffen</div>
+          <div class="item-body">Spectaculair dorp gebouwd op een rotsspit boven twee rivieren — "Plus Beaux Villages de France". Kathaargeschiedenis (belegering 1210), een van de vroegste wijnregio's van Gallië. Kleine wandeling door de rotsgangen. Goed restaurant aan de klif. 45 minuten rijden maar de foto's zijn onbetaalbaar.</div>
+          <div class="item-meta"><span class="meta-pill">📍 45 min</span><span class="meta-pill">🏰 Katharen</span><span class="meta-pill">📸 Fotogeniek</span></div>
+        </div>
+
+
+
+      </div></div>
+    </div>
+
+    <!-- MET JOB -->
+    <div class="acc-item">
+      <div class="acc-header" onclick="toggle(this)">
+        <span class="acc-icon">👶</span>
+        <span class="acc-title">Met Job (bijna 2 jaar)</span>
+        <span class="acc-chevron">▼</span>
+      </div>
+      <div class="acc-body"><div class="acc-inner">
+
+        <div class="kid-card">
+          <div class="kid-title">🌊 Het strand</div>
+          <div class="kid-body">De camping ligt vlak aan zee — het strand is de grote attractie. Voor een kind van bijna 2 is eindeloos spelen in het zand en de branding al een compleet programma. Hoed, zonnebrand, waterschoentjes, speelgoed. Don't overthink it.</div>
+        </div>
+
+
+        <div class="kid-card">
+          <div class="kid-title">💧 Aqualand Cap d'Agde</div>
+          <div class="kid-body">Waterpark met een speciaal peuterbad en kleine glijbanen. Voor kinderen van bijna 2 is er altijd een afgesloten peuter-area. Goede optie voor een namiddag als het strand even genoeg is.</div>
+        </div>
+
+
+        <div class="kid-card">
+          <div class="kid-title">⚓ Sète — visboot kijken aan het kanaal</div>
+          <div class="kid-body">De haven van Sète heeft echte vissers en boten die aanleggen. Job staat op de kade naar de boten te wijzen, jij eet een bord mosselen naast hem. Win-win. Korte route langs het kanaal, weinig drempels, goed bereikbaar met buggy.</div>
+        </div>
+
+        <div class="kid-card">
+          <div class="kid-title">🏕️ Camping-activiteiten</div>
+          <div class="kid-body">Yelloh! Village Le Sérignan Plage is een 5-sterren camping met kinderbad, animatie en speeltuinen. Job kan zich prima vermaken zonder de camping te verlaten — handig als jullie uitgerust willen blijven.</div>
+        </div>
+
+      </div></div>
+    </div>
+
+    <!-- ETEN & DRINKEN -->
+    <div class="acc-item">
+      <div class="acc-header" onclick="toggle(this)">
+        <span class="acc-icon">🍽️</span>
+        <span class="acc-title">Eten & Drinken</span>
+        <span class="acc-chevron">▼</span>
+      </div>
+      <div class="acc-body"><div class="acc-inner">
+
+        <div class="rest-card">
+          <span class="rest-emoji">🦪</span>
+          <div>
+            <div class="rest-name">Moules de Bouzigues</div>
+            <div class="rest-type">Étang de Thau · 20 min rijden</div>
+            <div class="rest-desc">De lekkerste mosselen van Frankrijk, gegarandeerd. Gekweekt in het schone brakke water van het Thau-meer. Eet ze op het terras van een oesterkweker in Bouzigues — met Picpoul erbij. Serieus een van de beste maaltijden van de vakantie.</div>
+          </div>
+        </div>
+
+
+        <p style="font-size:0.82rem; font-weight:700; color:var(--terra); margin:12px 0 8px;">🍷 Wijn van de regio</p>
+
+        <div class="wine-card">
+          <div class="wine-type">Wit · Languedoc</div>
+          <div class="wine-name">Picpoul de Pinet</div>
+          <div class="wine-desc">Dé wijn voor bij zeevruchten. Fris, zuur, licht. "Picpoul" betekent letterlijk "liptikker" in het Occitaans — de zuurgraad prikt je lippen. Spotgoedkoop in de supermarkt hier (€4-8). Koop een fles bij de mosselen.</div>
+        </div>
+
+        <div class="wine-card">
+          <div class="wine-type">Rood · Bergdorp Faugères</div>
+          <div class="wine-name">Faugères AOC</div>
+          <div class="wine-desc">45 minuten van de camping, maar de moeite waard als wijnbestemming. Krachtige, kruidige rode wijnen van schiste-grond. Een aperitief-middagje in het dorpje Faugères is heel erg gezellig.</div>
+        </div>
+
+        <p style="font-size:0.82rem; font-weight:700; color:var(--terra); margin:12px 0 8px;">🥘 Lokale smaken</p>
+        <div class="local-food-grid">
+          <div class="food-chip">
+            <span class="food-emoji">🥘</span>
+            <div class="food-name">Brandade de Morue</div>
+            <div class="food-desc">Gepureerde gezouten kabeljauw — beter dan het klinkt</div>
+          </div>
+          <div class="food-chip">
+            <span class="food-emoji">🍋</span>
+            <div class="food-name">Tapenade</div>
+            <div class="food-desc">Olijfpasta — koop een groot potje voor onderweg</div>
+          </div>
+          <div class="food-chip">
+            <span class="food-emoji">🐟</span>
+            <div class="food-name">Anchoïade</div>
+            <div class="food-desc">Ansjovisdip bij rauwkost — klassieke apero</div>
+          </div>
+          <div class="food-chip">
+            <span class="food-emoji">🦞</span>
+            <div class="food-name">Gegrilde vis</div>
+            <div class="food-desc">Dorade of zeebaars van de grill — lekkerste op het strand</div>
+          </div>
+        </div>
+
+      </div></div>
+    </div>
+
+    <!-- WEETJES -->
+    <div class="acc-item">
+      <div class="acc-header" onclick="toggle(this)">
+        <span class="acc-icon">💡</span>
+        <span class="acc-title">Weetjes & Verhalen</span>
+        <span class="acc-chevron">▼</span>
+      </div>
+      <div class="acc-body"><div class="acc-inner">
+
+        <div class="fact-card">
+          <div class="fact-head">🦀 Étang de Thau</div>
+          Het Thau-meer (naast de camping) produceert 10% van alle Franse oesters én de helft van alle mosselen. Het brakke water geeft ze een bijzonder nootachtig smaakje. Eet ze ter plekke — ze zijn nog nooit zo vers.
+        </div>
+        <div class="fact-card">
+          <div class="fact-head">🏛️ Agde: ouder dan Rome</div>
+          Agde werd gesticht in 525 v.Chr. door Griekse kolonisten uit Phocaea. Op dat moment liep Rome nog op blote voeten. Het Grieks museum van Agde heeft unieke vondsten.
+        </div>
+        <div class="fact-card">
+          <div class="fact-head">🌿 Canal du Midi — ingenieurstechniek</div>
+          Het Canal du Midi (1681) verbindt de Atlantische Oceaan met de Middellandse Zee. Gebouwd door Pierre-Paul Riquet in slechts 14 jaar. Hij stierf zes maanden voor de opening. Eén van de grootste civieltechnische projecten van de 17e eeuw.
+        </div>
+
+      </div></div>
+    </div>
+
+    <!-- PRAKTISCH -->
+    <div class="acc-item">
+      <div class="acc-header" onclick="toggle(this)">
+        <span class="acc-icon">📋</span>
+        <span class="acc-title">Praktisch</span>
+        <span class="acc-chevron">▼</span>
+      </div>
+      <div class="acc-body"><div class="acc-inner">
+        <div class="callout-box">
+          <div class="callout-head">🏕️ Camping gegevens</div>
+          Yelloh! Village Le Sérignan Plage, 34410 Sérignan<br>
+          <strong>Aankomst:</strong> zo 16 aug om 17:00<br>
+          <strong>Vertrek:</strong> zo 23 aug om 10:00<br>
+          <strong>Referentie:</strong> 232221 / G6889004<br>
+          <strong>Kenteken:</strong> zie boekingsbevestiging<br>
+          <button class="copy-btn" onclick="copyAddr(this,'Yelloh Village Le Sérignan Plage, 34410 Sérignan')">📋 Kopieer adres</button>
+        </div>
+        <div class="callout-box" style="border-color:#C03020;background:#FFF0EE;">
+          <div class="callout-head" style="color:#C03020;">⚠️ Betaling</div>
+          <strong>€2.057,29 bijbetalen vóór 16 juli 2026!</strong><br>
+          Al betaald: €681,75<br>
+          Totaal: €2.739,04
+        </div>
+
+        <div class="callout-box">
+          <div class="callout-head">🛒 Boodschappen — sla de campingshop over</div>
+          De Intermarché of Super U in Sérignan dorp (5 min rijden) is 2–3× goedkoper dan de campingshop. Koop brood, wijn, zonnebrand en babyvoeding daar. De campingshop is voor noodaankopen, niet voor de weekboodschappen.
+        </div>
+      </div></div>
+    </div>
+
+    <!-- WEER & TIMING -->
+    <div class="acc-item">
+      <div class="acc-header" onclick="toggle(this)">
+        <span class="acc-icon">🌤️</span>
+        <span class="acc-title">Weer & Timing</span>
+        <span class="acc-chevron">▼</span>
+      </div>
+      <div class="acc-body"><div class="acc-inner">
+        <div class="fact-card">
+          <div class="fact-head">🌡️ Wat te verwachten</div>
+          Augustus in de Languedoc is snoeiheet: 35–40°C overdag, zeewater rond de 24°C. Bijna geen regen. De Tramontane (noord-noordwestenwind) kan plots opsteken — dan is het strand minder aangenaam maar ideaal voor een uitstap.
+        </div>
+        <div class="kid-card">
+          <div class="kid-title">⏰ Strandschema met Job</div>
+          <div class="kid-body">Strand vóór 10u en ná 17u — dan is de zon draaglijk en het zand niet gloeiend heet. Tussen 12u en 16u: zwembad van de camping (schaduw!), slaapje, airco in de chalet. Nooit vergeten: zonnebrand factor 50 en een hoedje.</div>
+        </div>
+        <div class="callout-box">
+          <div class="callout-head">💡 Beste dagindeling</div>
+          7u: strand. 10u: ontbijt + camping. 12u: lunch + siësta (doe het echt). 17u: strand of uitstap. 20u: avondeten buiten. De Fransen leven zo in augustus — en ze hebben gelijk.
+        </div>
+        <div class="callout-box">
+          <div class="callout-head">🌬️ Als de Tramontane waait</div>
+          Perfecte dag voor Béziers, Pézenas of de mosselen in Bouzigues. Die uitstapjes staan dan sowieso op het programma — een winddag is het ideale excuus.
+        </div>
+
+        <div class="callout-box">
+          <div class="callout-head">🌧️ Als het regent aan de kust</div>
+          Zeldzaam in augustus maar het kan. Opties: aquarium van Cap d'Agde, Carcassonne (overdekt gedeelte), of een proeverij bij een lokaal domaine — allemaal prima bij regen. De Tramontane blaast bewolking snel weg: wacht een dag.
+        </div>
+      </div></div>
+    </div>
+
+  </div><!-- /accordion leg2 -->
+</section>
+
+<!-- ═══════════ ROUTE TUSSEN LEG 2 EN 3 ═══════════ -->
+<div class="between-legs">
+  <span class="between-icon">🚗</span>
+  <div class="between-text">
+    <div class="between-title">Sérignan → Meursault, Bourgogne</div>
+    <div class="between-sub">±440 km · plan 5,5–6 uur incl. pauzes · Via A9 → A7 (Autoroute du Soleil)</div>
+    <div class="between-chips">
+      <span class="between-chip">🍳 Lunch in Lyon!</span>
+      <span class="between-chip">☀️ Autoroute du Soleil</span>
+      <span class="between-chip">🍷 Bourgogne nadert</span>
+    </div>
+    <div class="between-sub" style="margin-top:6px;">Lyon is dé gastronomische hoofdstad van Frankrijk — perfect voor een lunchtussenstop (1,5u). Bouchon lyonnais = authentieke Lyonse bistro. Neem de A6 richting Beaune en je rijdt letterlijk door de wijngaarden.</div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     LEG 3 — MEURSAULT / BOURGOGNE
+═══════════════════════════════════════════ -->
+<section class="leg-section" id="leg3">
+  <div class="leg-hero-wrap">
+    <div class="leg-hero-bg leg-hero-3" style="width:100%;height:100%;position:absolute;inset:0;"></div>
+    <img class="leg-hero-bg"
+      src="https://media.huttopia.com/site-gallery/eu/927/summer/image-1.jpg"
+      alt="Huttopia Meursault — chalet met wijngaarduitzicht"
+      onerror="this.src='https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=900&h=400&fit=crop&auto=format'" style="position:relative;z-index:1;">
+    <div class="leg-hero-overlay"></div>
+    <div class="leg-hero-content">
+      <span class="leg-num-pill">Etappe 3 · 6 nachten</span>
+      <h2>Meursault</h2>
+      <div class="leg-hero-dates">🗓 zo 23 aug (16:00) → za 29 aug (11:00)</div>
+    </div>
+  </div>
+
+  <div class="photo-strip-wrap">
+    <div class="photo-strip-label">📸 Huttopia Meursault</div>
+    <div class="photo-strip">
+      <img class="photo-strip-img wide" src="https://media.huttopia.com/site-gallery/eu/927/summer/image-1.jpg" alt="Chalet terras met wijngaarduitzicht" loading="lazy">
+      <img class="photo-strip-img" src="https://media.huttopia.com/site-gallery/eu/927/summer/image-2.jpg" alt="Meursault wijnflessen" loading="lazy">
+      <img class="photo-strip-img wide" src="https://media.huttopia.com/site-gallery/eu/927/summer/image-3.jpg" alt="Terras met lichtjes en wijngaarduitzicht" loading="lazy">
+      <img class="photo-strip-img" src="https://media.huttopia.com/site-gallery/eu/927/summer/image-4.jpg" alt="Kinderen tafelvoetbal" loading="lazy">
+      <img class="photo-strip-img wide" src="https://media.huttopia.com/site-gallery/eu/927/summer/image-5.jpg" alt="Glamping tent met wijngaarduitzicht" loading="lazy">
+      <img class="photo-strip-img" src="https://media.huttopia.com/site-gallery/eu/927/summer/image-8.jpg" alt="Kind springt in het zwembad" loading="lazy">
+    </div>
+  </div>
+
+  <div class="info-chips">
+    <div class="info-chip">
+      <div class="info-chip-label">🏕️ Verblijf</div>
+      <div class="info-chip-value small">Huttopia Meursault</div>
+    </div>
+    <div class="info-chip">
+      <div class="info-chip-label">🌿 Chalet</div>
+      <div class="info-chip-value small">Évasion Vista · wijnbergzicht</div>
+    </div>
+    <div class="info-chip">
+      <div class="info-chip-label">📄 Referentie</div>
+      <div class="info-chip-value small">B2975796</div>
+    </div>
+    <div class="info-chip ok-chip">
+      <div class="info-chip-label">💳 Betaling</div>
+      <div class="info-chip-value small" style="color:var(--success);">€883,92 — volledig betaald ✓</div>
+    </div>
+  </div>
+
+  <div class="leg-accordion">
+
+    <!-- BEZIENSWAARDIGHEDEN -->
+    <div class="acc-item">
+      <div class="acc-header" onclick="toggle(this)">
+        <span class="acc-icon">🏰</span>
+        <span class="acc-title">Bezienswaardigheden</span>
+        <span class="acc-chevron">▼</span>
+      </div>
+      <div class="acc-body"><div class="acc-inner">
+
+        <div class="item-card">
+          <div class="item-title">🏥 Hôtel-Dieu / Hospices de Beaune</div>
+          <div class="item-body">Absoluut de highlight van Bourgogne. Dit 15e-eeuwse ziekenhuis heeft een spectaculaire binnenhof met kleurrijke Bourgondische dakpannen in geometrische patronen. Misschien wel het mooiste gebouw van Frankrijk. Loop niet weg zonder dit gezien te hebben.</div>
+          <div class="item-meta">
+            <span class="meta-pill">📍 Beaune, 15 min</span>
+            <span class="meta-pill">🎫 €12/pp</span>
+            <span class="meta-pill">⏱ 2 uur</span>
+          </div>
+        </div>
+
+        <div class="item-card">
+          <div class="item-title">🏰 Château de la Rochepot</div>
+          <div class="item-body">Sprookjeskasteel met dezelfde kleurrijke dakpannen als Beaune — maar dan midden in de wijngaarden. Gebouwd op een rots boven het dal. Echt het soort kasteel dat Job later in sprookjesboeken herkent.</div>
+          <div class="item-meta">
+            <span class="meta-pill">📍 20 min</span>
+            <span class="meta-pill">👶 Droomkasteel</span>
+            <span class="meta-pill">🎫 €8/pp</span>
+          </div>
+        </div>
+
+        <div class="item-card">
+          <div class="item-title">🍷 Côte de Beaune wijnroute</div>
+          <div class="item-body">Volg de <strong>N74 — Route des Grands Crus</strong>. Rijd rustig door Pommard, Volnay, Meursault, Puligny-Montrachet en Chassagne-Montrachet. Stop bij een domaine voor een degustatie. Hier groeien de duurste en beroemdste witte wijnen ter wereld — en je staat er gewoon middenin. De N74 is de heiligste weg van de wijnwereld.</div>
+          <div class="item-meta"><span class="meta-pill">🚗 N74 Route des Grands Crus</span><span class="meta-pill">🍾 Domaine-bezoek</span></div>
+        </div>
+
+
+
+
+        <div class="item-card">
+          <div class="item-title">🫙 Moutarderie Edmond Fallot — Beaune</div>
+          <div class="item-body">De laatste ambachtelijke mosterdmolen van Bourgogne, gelegen in Beaune. Rondleiding inclusief zelf mosterd malen op een traditionele steen. Meteen meenemen: de Épices + Miel-variant is niet te vinden in NL. Perfect cadeau mee naar huis. Reserveer op fallot.com.</div>
+          <div class="item-meta"><span class="meta-pill">📍 Beaune</span><span class="meta-pill">🎫 €8/pp</span><span class="meta-pill">🛍️ Shop op locatie</span></div>
+        </div>
+
+
+      </div></div>
+    </div>
+
+    <!-- MET JOB -->
+    <div class="acc-item">
+      <div class="acc-header" onclick="toggle(this)">
+        <span class="acc-icon">👶</span>
+        <span class="acc-title">Met Job (bijna 2 jaar)</span>
+        <span class="acc-chevron">▼</span>
+      </div>
+      <div class="acc-body"><div class="acc-inner">
+
+
+        <div class="kid-card">
+          <div class="kid-title">🌿 Picknick in de wijngaarden</div>
+          <div class="kid-body">Koop stokbrood, Époisses, ham en een fles Meursault bij de lokale slager/fromagerie. Ga zitten tussen de druivenranken bij zonsondergang. Beste maaltijd van de vakantie, gegarandeerd.</div>
+        </div>
+
+        <div class="kid-card">
+          <div class="kid-title">🚲 Fietsen in de Côte de Beaune</div>
+          <div class="kid-body">Huur een bakfiets of een kinderfietsaanhanger in Beaune. De wijnroute is vlak en het landschap is prachtig. Job slaapt er gegarandeerd in.</div>
+        </div>
+
+        <div class="kid-card">
+          <div class="kid-title">🏛️ Beaune — buggy-vriendelijk wandelen</div>
+          <div class="kid-body">Beaune heeft een compacte middeleeuwse binnenstad met brede straatjes — prima met buggy. Kathedraal, markt, ijsjes. Hospices de Beaune is indrukwekkend van buiten, gratis bekijken. Job wijst naar de kleurrijke dakpannen. Win. Let op: zaterdagmarkt is drukker maar ook leuker.</div>
+        </div>
+
+      </div></div>
+    </div>
+
+    <!-- WIJN -->
+    <div class="acc-item">
+      <div class="acc-header" onclick="toggle(this)">
+        <span class="acc-icon">🍷</span>
+        <span class="acc-title">Wijn — je bent op heilige grond</span>
+        <span class="acc-chevron">▼</span>
+      </div>
+      <div class="acc-body"><div class="acc-inner">
+
+        <div class="wine-card">
+          <div class="wine-type">Wit · Chardonnay · Meursault Village</div>
+          <div class="wine-name">Meursault — de instapper</div>
+          <div class="wine-desc">Boterigs, nootachtig, vol. Village-niveau kost je ter plekke €60–€95. Onder de €50 vind je bijna niets dat de moeite waard is — dan drink je de restjes van een handelshuis zonder het karakter waar je voor komt.</div>
+        </div>
+
+        <div class="wine-card">
+          <div class="wine-type">Wit · Chardonnay · Meursault Premier Cru</div>
+          <div class="wine-name">Les Charmes · Les Perrières · Genevrières</div>
+          <div class="wine-desc">De echte krachtpatsers. Reken op €110–€220 per fles. Pijnlijk voor de bankrekening — maar dit zijn de wijnen met die legendarische gelaagdheid en lengte. Domaine des Comtes Lafon en Coche-Dury zijn de absolute top.</div>
+        </div>
+
+        <div class="wine-card">
+          <div class="wine-type">Wit · Chardonnay · Slimmere alternatieven</div>
+          <div class="wine-name">Saint-Aubin & Auxey-Duresses</div>
+          <div class="wine-desc">10 minuten rijden. Dezelfde vette, boterige Chardonnay-stijl als Meursault maar voor €40–€55. Blind geproefd verslaan ze regelmatig een Meursault Village van €80. Beste prijs-kwaliteit van de hele Côte de Beaune.</div>
+        </div>
+
+        <div class="wine-card">
+          <div class="wine-type">Rood · Pinot Noir · Pommard AOC</div>
+          <div class="wine-name">Pommard</div>
+          <div class="wine-desc">De krachtigste rode wijn van de Côte de Beaune. Diep robijnrood, tannenrijk, robuust. De antipode van Meursault. Neem er één mee naar huis.</div>
+        </div>
+
+        <div class="wine-card">
+          <div class="wine-type">Rood · Pinot Noir · Volnay AOC</div>
+          <div class="wine-name">Volnay</div>
+          <div class="wine-desc">Eleganter en fluweelzachter dan Pommard. Parfumachtige kersennoten. Wordt ook wel "de Musset van de Bourgogne" genoemd — poëtisch en subtiel.</div>
+        </div>
+
+        <div style="background:linear-gradient(135deg,#7A5A00,#B08A10);color:white;border-radius:12px;padding:11px 13px;margin-bottom:8px;border:2px solid #E8C040;">
+          <div style="font-size:0.65rem;text-transform:uppercase;letter-spacing:0.6px;color:rgba(255,220,80,0.85);font-weight:700;margin-bottom:4px;">🏠 Wijnhuis · Meursault · Nederlands-Frans</div>
+          <div style="font-family:'DM Serif Display',serif;font-size:1.1rem;font-style:italic;color:#FFE87A;margin-bottom:4px;">Janots & Bos ⭐</div>
+          <div style="font-size:0.8rem;color:rgba(255,255,255,0.9);line-height:1.45;">Dé tip van dit hele reisboekje. Thierry Janots (Frans) en Richard Bos (Nederlands) runnen samen een wijnhuis op 2 Place de l'Europe in Meursault — letterlijk om de hoek van jullie camping. Je proeft rechtstreeks uit het vat in de kelder. Ze spreken Nederlands, Frans én Engels. Reserveer van tevoren via janotsbos.eu — ze zijn populair en snel vol.</div>
+        </div>
+
+        <div class="callout-box" style="border-color:#C03020;background:#FFF0EE;">
+          <div class="callout-head" style="color:#C03020;">⚠️ Vermijd de toeristentaks</div>
+          Koop niet bij het eerste proeflokaal aan het dorpsplein van Meursault. Dat zijn vaak fancy etalages die rekenen wat ze willen omdat toeristen binnenlopen. Je betaalt de naam op het bord, niet de wijn in het glas.
+        </div>
+
+        <div class="callout-box">
+          <div class="callout-head">💡 Slim aanpakken: proeverij eerst</div>
+          Boek van tevoren een proeverij bij een kleiner domaine (€40–€70). Dat bedrag vervalt vaak als je een doosje koopt. Dan weet je zeker dat je het lekker vindt vóórdat je die €100+ aftikt. Bel een week eerder — ze vinden het geweldig als je oprecht geïnteresseerd bent.
+        </div>
+
+
+
+        <div class="callout-box">
+          <div class="callout-head">🔄 Backup als Janots & Bos volgeboekt is</div>
+          Ze zijn populair, dus reserveer vroeg. Niet gelukt? Goede alternatieven voor walk-in of makkelijk reserveren: <strong>Château de Meursault</strong> (grote naam, altijd open voor proeverijen), <strong>Domaine Roulot</strong> (bel een week tevoren), <strong>Auxey-Duresses: Roy Frères</strong> (zelden volgeboekt, even goed). Voor Saint-Aubin: <strong>Marc Colin</strong> — bel gerust aan, ze zijn vriendelijk voor geïnteresseerde bezoekers.
+        </div>
+        <div class="callout-box">
+          <div class="callout-head">🗺️ Proeverij-plan</div>
+          <strong>Eerste keuze:</strong> Janots &amp; Bos — 2 Place de l'Europe, Meursault · janotsbos.eu<br>
+          <strong>In Meursault:</strong> Domaine des Comtes Lafon, Domaine Roulot, Château de Meursault<br>
+          <strong>Bij de buren:</strong> Saint-Aubin (Marc Colin), Auxey-Duresses (Dominique &amp; Vincent Roy)<br>
+          <strong>Praktisch:</strong> neem een koelbox mee voor de rit terug naar NL.
+        </div>
+
+      </div></div>
+    </div>
+
+    <!-- ETEN -->
+    <div class="acc-item">
+      <div class="acc-header" onclick="toggle(this)">
+        <span class="acc-icon">🍽️</span>
+        <span class="acc-title">Eten & Drinken</span>
+        <span class="acc-chevron">▼</span>
+      </div>
+      <div class="acc-body"><div class="acc-inner">
+
+        <div class="rest-card">
+          <span class="rest-emoji">🏅</span>
+          <div>
+            <div class="rest-name">Bistrot Bourguignon — Beaune</div>
+            <div class="rest-type">Brasserie / Bouchon</div>
+            <div class="rest-desc">Klassieke Bourgondische keuken, ruim aanbod lokale wijnen per glas. Ontspannen sfeer, eerlijke prijzen. Perfect voor het grote Bourgondische avondmaal.</div>
+          </div>
+        </div>
+
+
+        <p style="font-size:0.82rem; font-weight:700; color:var(--terra); margin:12px 0 8px;">🥩 Typisch Bourgondisch</p>
+        <div class="local-food-grid">
+          <div class="food-chip">
+            <span class="food-emoji">🍖</span>
+            <div class="food-name">Bœuf Bourguignon</div>
+            <div class="food-desc">Stoofvlees in rode wijn — oorspronkelijk Bourgondisch</div>
+          </div>
+          <div class="food-chip">
+            <span class="food-emoji">🐌</span>
+            <div class="food-name">Escargots</div>
+            <div class="food-desc">Slakken in knoflookboter — doe het gewoon, Dianne</div>
+          </div>
+          <div class="food-chip">
+            <span class="food-emoji">🧀</span>
+            <div class="food-name">Époisses</div>
+            <div class="food-desc">Stinkkaas gewassen in Marc de Bourgogne — verplicht</div>
+          </div>
+          <div class="food-chip">
+            <span class="food-emoji">🫧</span>
+            <div class="food-name">Gougères</div>
+            <div class="food-desc">Kleine kaassoesjes als apero — overal te koop</div>
+          </div>
+        </div>
+
+      </div></div>
+    </div>
+
+    <!-- WEETJES -->
+    <div class="acc-item">
+      <div class="acc-header" onclick="toggle(this)">
+        <span class="acc-icon">💡</span>
+        <span class="acc-title">Weetjes & Verhalen</span>
+        <span class="acc-chevron">▼</span>
+      </div>
+      <div class="acc-body"><div class="acc-inner">
+
+        <div class="fact-card">
+          <div class="fact-head">💰 Beroemdste wijnveiling ter wereld</div>
+          Elk jaar in november organiseert het Hospice de Beaune de meest prestigieuze wijnveiling ter wereld. Prijzen voor een vat Meursault lopen op tot tienduizenden euro's. Jij staat nu op de plek waar dat wijn wordt gemaakt.
+        </div>
+        <div class="fact-card">
+          <div class="fact-head">🌍 Klimaat en Terroir</div>
+          Pinot noir groeit alleen écht goed in Bourgogne vanwege de unieke krijtbodem (argilo-calcaire). Wijnmakers in Californië, Nieuw-Zeeland en Australië hebben het geprobeerd. Ze komen altijd net tekort. Het is de grond, niet alleen de druif.
+        </div>
+        <div class="fact-card">
+          <div class="fact-head">🏰 Bourgondisch Hertogdom</div>
+          In de 15e eeuw was het Hertogdom Bourgondië rijker en machtiger dan Frankrijk zelf — het omvatte ook het huidige België en de Nederlanden. De Bourgondische hertogen (zoals Filips de Goede) waren kunstmecenassen van formaat. Vandaar al die prachtige kleurrijke dakpannen.
+        </div>
+
+      </div></div>
+    </div>
+
+    <!-- PRAKTISCH -->
+    <div class="acc-item">
+      <div class="acc-header" onclick="toggle(this)">
+        <span class="acc-icon">📋</span>
+        <span class="acc-title">Praktisch</span>
+        <span class="acc-chevron">▼</span>
+      </div>
+      <div class="acc-body"><div class="acc-inner">
+        <div class="callout-box">
+          <div class="callout-head">📍 Huttopia Meursault</div>
+          Chalet Évasion Vista · uitzicht over de wijngaarden<br>
+          <strong>Aankomst:</strong> zo 23 aug vanaf 16:00<br>
+          <strong>Vertrek:</strong> za 29 aug vóór 11:00<br>
+          <strong>Referentie:</strong> B2975796<br>
+          <strong>Reizigers:</strong> 2 volwassenen + 1 kind (Job)<br>
+          <strong>Betaling:</strong> €883,92 — volledig betaald ✓<br>
+          <button class="copy-btn" onclick="copyAddr(this,'Huttopia Meursault, 21190 Meursault')">📋 Kopieer adres</button>
+        </div>
+        <div class="callout-box" style="border-color:#C03020;background:#FFF0EE;">
+          <div class="callout-head" style="color:#C03020;">⚠️ Let op: niet restitueerbaar!</div>
+          Dit verblijf is niet-restitueerbaar. Boek bij twijfel annuleringsverzekering.
+        </div>
+      </div></div>
+    </div>
+
+    <!-- WEER & TIMING -->
+    <div class="acc-item">
+      <div class="acc-header" onclick="toggle(this)">
+        <span class="acc-icon">🌤️</span>
+        <span class="acc-title">Weer & Timing</span>
+        <span class="acc-chevron">▼</span>
+      </div>
+      <div class="acc-body"><div class="acc-inner">
+        <div class="fact-card">
+          <div class="fact-head">🌡️ Wat te verwachten</div>
+          Meursault in late augustus: 25–30°C overdag, aangenaam 's avonds (16–18°C). Veel minder heet dan de Languedoc. Ochtenden zijn helder en fris — ideaal voor fietsen. Kans op regen neemt toe richting eind augustus.
+        </div>
+        <div class="kid-card">
+          <div class="kid-title">⏰ Beste tijd voor de wijngaarden</div>
+          <div class="kid-body">Vroeg in de ochtend (8–10u) zijn de druivenranken goudgeel in het tegenlicht — mooiste fotomoment van de hele vakantie. Proeverijen plannen tussen 10u en 12u: dan zijn de domaines open en de wijnmakers uitgerust en vriendelijk.</div>
+        </div>
+        <div class="callout-box">
+          <div class="callout-head">💡 Beste dagindeling</div>
+          Ochtend: fietsen of wandelen door de wijngaarden. Rond 11u: proeverij bij een domaine. Middag: picknick buiten met brood, kaas en een fles. Namiddag: Beaune of kasteel. Avond: diner buiten met de aanschaf van de dag.
+        </div>
+
+        <div class="callout-box">
+          <div class="callout-head">🌧️ Als het regent in Meursault</div>
+          Meer kans op regen dan aan de kust. Mooie regenopties: proeverij bij een domaine (overdekt, gezellig), de Hospices de Beaune binnenin (2 uur), het wijnmuseum in Beaune, of Dijon (grote stad, veel overdekte bezienswaardigheden). Regen in de wijngaarden is trouwens ook prachtig fotografisch.
+        </div>
+      </div></div>
+    </div>
+
+  </div><!-- /accordion leg3 -->
+</section>
+
+
+<!-- ═══════════ TERUGWEG ═══════════ -->
+<div class="between-legs">
+  <span class="between-icon">🏠</span>
+  <div class="between-text">
+    <div class="between-title">Meursault → Vleuten — terugweg</div>
+    <div class="between-sub">±750 km · plan 9–10 uur deur-tot-deur incl. pauzes · Via A6 → E40/E19</div>
+    <div class="between-chips">
+      <span class="between-chip">🍾 Champagne-stop!</span>
+      <span class="between-chip">🏰 Reims of Épernay</span>
+      <span class="between-chip">💶 ~€65 tol</span>
+    </div>
+    <div class="between-sub" style="margin-top:6px;"><strong>Champagne-tussenstop sterk aanbevolen.</strong> Rijd via A5 richting Troyes, dan A26 richting Reims — 30 min omrijden maar 100% de moeite. Épernay is dé champagnehoofdstad: Avenue de Champagne heeft alle grote huizen (Moët &amp; Chandon, Mercier met treintje = top voor Job, Pol Roger). Of Reims voor de kathedraal + één flesje Bollinger mee naar huis. Dan verder via E19 naar NL. Vertrek uiterlijk 08:00 voor een aankomst vóór het avondeten.</div>
+  </div>
+</div>
+
+<!-- FRANSE WOORDJES -->
+<section style="margin: 8px 16px 0;">
+  <div style="background:white;border-radius:18px;padding:18px 16px;box-shadow:0 2px 14px rgba(0,0,0,0.07);">
+    <div style="font-family:'DM Serif Display',serif;font-size:1.2rem;font-weight:600;color:var(--forest);margin-bottom:4px;display:flex;align-items:center;gap:8px;">🇫🇷 Frans spiekbriefje</div>
+    <div style="font-size:0.75rem;color:var(--brown);margin-bottom:14px;">Toeristen die Frans proberen worden aanzienlijk beter behandeld in restaurants.</div>
+
+    <div style="display:flex;flex-direction:column;gap:7px;">
+
+      <div style="background:var(--terra-pale);border-left:3px solid var(--terra);border-radius:10px;padding:9px 12px;">
+        <div style="font-family:'DM Serif Display',serif;font-size:1.05rem;font-style:italic;color:var(--terra);font-weight:600;">Une carafe d'eau, s'il vous plaît</div>
+        <div style="font-size:0.75rem;color:var(--brown);margin-top:2px;">Een karaf water, alsjeblieft — gratis kraanwater, niet die fles van €6</div>
+      </div>
+
+      <div style="background:var(--terra-pale);border-left:3px solid var(--terra);border-radius:10px;padding:9px 12px;">
+        <div style="font-family:'DM Serif Display',serif;font-size:1.05rem;font-style:italic;color:var(--terra);font-weight:600;">L'addition, s'il vous plaît</div>
+        <div style="font-size:0.75rem;color:var(--brown);margin-top:2px;">De rekening, alsjeblieft — Fransen rekenen niet automatisch af</div>
+      </div>
+
+      <div style="background:var(--terra-pale);border-left:3px solid var(--terra);border-radius:10px;padding:9px 12px;">
+        <div style="font-family:'DM Serif Display',serif;font-size:1.05rem;font-style:italic;color:var(--terra);font-weight:600;">Avez-vous une chaise haute ?</div>
+        <div style="font-size:0.75rem;color:var(--brown);margin-top:2px;">Heeft u een kinderstoel? — voor Job, onmisbaar</div>
+      </div>
+
+      <div style="background:var(--terra-pale);border-left:3px solid var(--terra);border-radius:10px;padding:9px 12px;">
+        <div style="font-family:'DM Serif Display',serif;font-size:1.05rem;font-style:italic;color:var(--terra);font-weight:600;">C'est délicieux !</div>
+        <div style="font-size:0.75rem;color:var(--brown);margin-top:2px;">Dit is heerlijk! — zeg het tegen de kok, het maakt hun dag</div>
+      </div>
+
+      <div style="background:var(--terra-pale);border-left:3px solid var(--terra);border-radius:10px;padding:9px 12px;">
+        <div style="font-family:'DM Serif Display',serif;font-size:1.05rem;font-style:italic;color:var(--terra);font-weight:600;">Je voudrais goûter ce vin, s'il vous plaît</div>
+        <div style="font-size:0.75rem;color:var(--brown);margin-top:2px;">Ik zou deze wijn graag proeven — bij een domaine, opent deuren</div>
+      </div>
+
+      <div style="background:var(--terra-pale);border-left:3px solid var(--terra);border-radius:10px;padding:9px 12px;">
+        <div style="font-family:'DM Serif Display',serif;font-size:1.05rem;font-style:italic;color:var(--terra);font-weight:600;">Où sont les toilettes ?</div>
+        <div style="font-size:0.75rem;color:var(--brown);margin-top:2px;">Waar zijn de toiletten? — voor Job-noodgevallen</div>
+      </div>
+
+      <div style="background:var(--gold-pale);border-left:3px solid var(--gold);border-radius:10px;padding:9px 12px;">
+        <div style="font-family:'DM Serif Display',serif;font-size:1.05rem;font-style:italic;color:var(--gold);font-weight:600;">Bonjour / Bonsoir / Merci / Au revoir</div>
+        <div style="font-size:0.75rem;color:var(--brown);margin-top:2px;">Verplicht bij elk contact. Een Fransman die niet gegroet wordt is beledigd — serieus.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+
+  <div class="footer-countdown" id="countdown-display"></div>
+  <span class="footer-logo">Van Roekel op Reis</span>
+  <div class="footer-dates">13 AUGUSTUS — 29 AUGUSTUS 2026</div>
+  <div class="footer-legs">
+    <span>🌋 Clermont-Ferrand</span>
+    <span>·</span>
+    <span>🏖️ Sérignan</span>
+    <span>·</span>
+    <span>🍷 Meursault</span>
+  </div>
+  <div class="footer-note">Bon voyage — Henk-Jan, Dianne & Job 👶</div>
+</footer>
+
+<!-- LIGHTBOX -->
+<div id="lightbox">
+  <span id="lightbox-close">✕</span>
+  <img id="lightbox-img" src="" alt="">
+</div>
+
+<script>
+  function toggle(header) {
+    const item = header.parentElement;
+    const isOpen = item.classList.contains('open');
+    const siblings = item.parentElement.querySelectorAll('.acc-item');
+    siblings.forEach(s => s.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  }
+  document.querySelectorAll('.leg-accordion').forEach(acc => {
+    // All accordions start closed
+  });
+
+  // Sticky nav scroll
+  function scrollToLeg(id) {
+    document.getElementById(id).scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  // Highlight active nav button on scroll
+  const legs = ['leg1','leg2','leg3'];
+  const navBtns = document.querySelectorAll('.nav-btn');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    legs.forEach(id => {
+      const el = document.getElementById(id);
+      if (el && el.getBoundingClientRect().top <= 120) current = id;
+    });
+    navBtns.forEach((btn, i) => {
+      btn.classList.toggle('active', legs[i] === current);
+    });
+  }, { passive: true });
+
+  // Copy address
+  function copyAddr(btn, addr) {
+    navigator.clipboard.writeText(addr).then(() => {
+      btn.textContent = '✓ Gekopieerd!';
+      btn.classList.add('copied');
+      setTimeout(() => {
+        btn.textContent = '📋 Kopieer adres';
+        btn.classList.remove('copied');
+      }, 2000);
+    });
+  }
+
+
+  // Countdown
+  function updateCountdown() {
+    const target = new Date('2026-08-13T00:00:00');
+    const now = new Date();
+    const diff = target - now;
+    const el = document.getElementById('countdown-display');
+    if (!el) return;
+    if (diff <= 0) { el.innerHTML = '🇫🇷 Bon voyage!'; return; }
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    el.innerHTML = 'Nog <span>' + days + '</span> dagen tot vertrek';
+  }
+  updateCountdown();
+  setInterval(updateCountdown, 60000);
+
+  // Lightbox
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  document.querySelectorAll('.photo-strip-img').forEach(img => {
+    img.addEventListener('click', () => {
+      lightboxImg.src = img.src.replace('im_w=720', 'im_w=1440');
+      lightbox.classList.add('active');
+    });
+  });
+  document.getElementById('lightbox-close').addEventListener('click', () => {
+    lightbox.classList.remove('active');
+  });
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) lightbox.classList.remove('active');
+  });
+</script>
+
+</body>
+</html>
